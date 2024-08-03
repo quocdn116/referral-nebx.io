@@ -252,7 +252,7 @@ def main():
     proxies = load_lines(proxy_file)
     links = load_lines(linkref_file)
     tokens = load_lines(tokens_file)
-    max_concurrent_tasks_cfg = input(input("Input total threads want to process:"))
+    max_concurrent_tasks_cfg = int(input("Enter your threads : "))
     semaphore = threading.Semaphore(max_concurrent_tasks_cfg)
     
     threads = []
